@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Ателье.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1 class="style1">
+                    Швейное ателье "Силуэт"
+                </h1>
+            </div>
+            <div class="loginDisplay">
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Pages/Главная страница.aspx" Text="Главная страница"/>
+                        <asp:MenuItem NavigateUrl="~/Pages/Заказы.aspx" Text="Заказы"/>
+                        <asp:MenuItem NavigateUrl="~/Pages/Исполнение заказов.aspx" Text="Исполнение заказов"/>
+                        <asp:MenuItem NavigateUrl="~/Pages/Просроченные заказы.aspx" Text="Просроченные заказы"/>
+                        <asp:MenuItem NavigateUrl="~/Pages/Изделия.aspx" Text="Изделия"/>
+                        <asp:MenuItem NavigateUrl="~/Pages/Материалы.aspx" Text="Материалы"/>
+                        <asp:MenuItem NavigateUrl="~/Pages/Поставка материалов.aspx" Text="Поставка материалов"/>
+                        <asp:MenuItem NavigateUrl="~/Pages/Дефицитные материалы.aspx" Text="Дефицитные материалы"/>
+                        <asp:MenuItem NavigateUrl="~/Pages/Отделы.aspx" Text="Отделы"/>
+                        <asp:MenuItem NavigateUrl="~/Pages/Отдел кадров.aspx" Text="Отдел кадров"/>
+                        <asp:MenuItem NavigateUrl="~/Pages/Отдел сбыта.aspx" Text="Отдел сбыта"/>
+                        <asp:MenuItem NavigateUrl="~/Pages/Контакты.aspx" Text="Контакты"/>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>
